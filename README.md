@@ -5,6 +5,7 @@ the initial project structure, which allows us to focus on implementing core fea
 
 ## Features:
 **1. RestAPI:** Used Actix for implementing endpoints and handling HTTP requests
+
 **2. DB integration:** Used Vercel's Postgres to store and retrieve data
 
 ## Usage:
