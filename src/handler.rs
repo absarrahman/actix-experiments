@@ -26,7 +26,7 @@ async fn health_checker_handler() -> impl Responder {
 
 #[get("/todos")]
 async fn get_todos(data: web::Data<PgPool>) -> impl Responder {
-    let result = sqlx::query_as::<_, model::Todo>("SELECT * FROM todos")
+    let result = sqlx::query_as!(Todo, "SELECT * FROM todos")
         .fetch_all(data.as_ref())
         .await;
 

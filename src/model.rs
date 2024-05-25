@@ -1,10 +1,9 @@
 use chrono::prelude::*;
 use serde::{Deserialize, Serialize};
 use std::sync::{Arc, Mutex};
-use sqlx::FromRow;
 use sqlx::types::Uuid;
 
-#[derive(FromRow, Serialize, Deserialize, Debug, Clone)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Todo {
     pub id: Option<Uuid>,
     pub title: String,
