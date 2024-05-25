@@ -12,4 +12,6 @@ chrono = { version = "0.4.38", features = ["serde"] }
 env_logger = "0.11.3"
 futures-util = "0.3.30"
 serde = { version = "1.0.202", features = ["derive"] }
-uuid = { version = "1.8.0", features = ["v4"] }
+uuid = { version = "1.8.0", features = ["v4", "serde"] }
+sqlx = { version = "0.7", features = [ "runtime-tokio", "postgres", "tls-native-tls", "uuid"] }
+dotenv = "0.15.0"
